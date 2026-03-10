@@ -1,0 +1,29 @@
+management:
+  endpoint:
+    shutdown:
+      enabled: true # 특정 엔드포인트 활성화
+    health:
+      show-components: always
+  #      show-details: always # 헬스 정보 더 자세히 조회
+  endpoints:
+    web:
+      exposure:
+        include: "*" # 모든 엔드포인드 웹에 노출
+      base-path: "/manage" # 엔드포인트 기본 경로 변경 (보안)
+  #        exclude: "env,beans" # web에 env, beans만 노출 제외
+  info: # 애플리케이션 기본 정보
+    java: # 자바 런타임 정보
+      enabled: true
+    os: # OS 정보
+      enabled: true
+    env: # Environment의 info.로 시작하는 정보
+      enabled: true
+
+info: # env 확인
+  app:
+    name: hello-actuator
+    company: jh
+
+logging: # 로거
+  level:
+    hello.controller: debug
