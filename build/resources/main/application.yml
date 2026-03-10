@@ -18,6 +18,8 @@ management:
       enabled: true
     env: # Environment의 info.로 시작하는 정보
       enabled: true
+    git:
+      mode: full # git에 대한 더 자세한 정보 조회
 
 info: # env 확인
   app:
