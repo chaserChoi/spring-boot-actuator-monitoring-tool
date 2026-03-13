@@ -38,6 +38,9 @@ dependencies {
     implementation 'io.github.oshai:kotlin-logging-jvm:5.1.0'
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
     implementation "org.jetbrains.kotlin:kotlin-reflect"
+
+    // prometheus 추가
+    implementation 'io.micrometer:micrometer-registry-prometheus'
 }
 
 tasks.named('test') {
